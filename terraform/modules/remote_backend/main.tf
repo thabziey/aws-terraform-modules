@@ -18,7 +18,7 @@ resource "aws_s3_bucket" "terraform_state_bucket" {
   }
 
   tags = {
-    Name = "var.bucket_name"
+    Name = var.bucket_name
   }
 }
 
@@ -74,6 +74,6 @@ resource "aws_dynamodb_table" "state_lock_table" {
   }
 
   tags = {
-    Name = "var.table_name"
+    Name = var.table_name
   }
 }
